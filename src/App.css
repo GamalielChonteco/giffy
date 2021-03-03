@@ -1,25 +1,35 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
+
 .App-content {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  padding: 16px;
+    background-color: #b2ebfa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    font-size: calc(10px + 2vmin);
+    color: white;
+    padding: 16px;
+}
+
+.App-logo {
+    object-fit: contain;
+    height: 250px;
+}
+
+.App-title {
+    color: #8d5aa4;
 }
 
 button {
-  font-size: 32px;
-  cursor: pointer;
+    font-size: 32px;
+    cursor: pointer;
 }
 
 a {
-  color: #FFF;
-  font-size: 22px;
-  text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
 }
