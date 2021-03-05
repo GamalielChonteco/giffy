@@ -14,7 +14,9 @@ const App = () => {
       <div className="App">
         <section className="App-content">
           <Link to="/">
-            <img className="App-logo" src="./logo-old.png" alt="Giffy logo" />
+            <figure className="App-logo">
+              <img src="/logo.png" alt="Giffy logo"/>
+            </figure>
           </Link>
           <GifsContextProvider>
             <Route

@@ -1,5 +1,5 @@
-import Gif from "../../components/Gif";
-import useGlobalGifs from "../../hooks/useGlobalGif";
+import Gif from "components/Gif";
+import useGlobalGifs from "hooks/useGlobalGif";
 // import StaticContext from "./../../context/StaticContext";
 
 export default function Detail({ params }) {
@@ -11,5 +11,8 @@ export default function Detail({ params }) {
 
     console.log(gif);
 
-    return <Gif {...gif} />
+    return <>
+    <h3 className="App-title">{ gif.title }</h3>
+        <Gif {...gif} />
+    </>
 }
