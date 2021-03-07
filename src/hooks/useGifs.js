@@ -4,7 +4,7 @@ import getGifs from "services/getGifs"
 
 const INITIAL_PAGE = 0
 
-const useGifs = ({ keyword } = {}) => {
+const useGifs = ({ keyword, limit = 5 } = {}) => {
 
     const { gifs, setGifs} = useContext(GifsContext)
     const [loading, setLoading] = useState(false)
@@ -14,13 +14,13 @@ const useGifs = ({ keyword } = {}) => {
 
     useEffect(() => {
         setLoading(true)
-        getGifs({ keyword: keywordToUse })
+        getGifs({ keyword: keywordToUse, limit })
         .then(gifs => {
             setGifs(gifs)
             setLoading(false)
             if (keyword) localStorage.setItem('lastKeyword', keyword)
             })
-    }, [keyword, keywordToUse, setGifs])
+    }, [keyword, keywordToUse, setGifs, limit])
 
     useEffect(() => {
         if (page === INITIAL_PAGE) return
