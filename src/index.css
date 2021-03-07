@@ -51,4 +51,5 @@ input[type=text] {
     font-size: 16px;
     border: none;
     padding: 4px 16px;
+    outline: none;
 }
