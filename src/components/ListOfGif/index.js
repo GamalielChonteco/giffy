@@ -6,12 +6,13 @@ const ListOfGifs = ({ gifs }) => {
   return (
     <div className="ListOfGifs">
       {
-        gifs.map(({ id, title, url }) =>
+        gifs.map(({ id, title, url, ...restOfGif }) =>
           <Gif
             id={id}
             key={id}
             title={title}
             url={url}
+            extraInfo={restOfGif}
           />
         )
       }
